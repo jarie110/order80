@@ -17,7 +17,7 @@ public class ConsumerController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id){
        return  restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
     }
-
+//  git学习测试
     @PostMapping("create")
     public CommonResult<Payment> creatPayment(Payment payment){
         return restTemplate.postForObject(PAYMENT_URL+"/payment/create",payment,CommonResult.class);
